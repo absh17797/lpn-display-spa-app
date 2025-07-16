@@ -1,0 +1,19 @@
+{
+  "name": "vehicle-display-app",
+  "version": "1.0.0",
+  "description": "Secure vehicle display system using Node.js MVC",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^6.1.5",
+    "jsonwebtoken": "^9.0.0"
+  }
+}

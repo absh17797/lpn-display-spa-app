@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+  background: #001f2d;
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
