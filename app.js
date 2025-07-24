@@ -21,6 +21,14 @@ app.use((req, res, next) => {
   next();
 });
 
+// app.use((req, res, next) => {
+//   if (req.protocol === "https") {
+//     return res.redirect("http://" + req.headers.host + req.url);
+//   }
+//   next();
+// });
+
+
 // Rate limiting
 const limiter = rateLimit({ windowMs: 1 * 60 * 1000, max: 20 });
 app.use("/api/", limiter);
@@ -56,7 +64,7 @@ app.post("/auth", (req, res) => {
   req.on("end", () => {
     const params = new URLSearchParams(body);
     if (params.get("pin") === process.env.SCREEN_PIN) {
-      res.cookie("pin", process.env.SCREEN_PIN, { httpOnly: true });
+      res.cookie("pin", process.env.SCREEN_PIN, { httpOnly: true, secure: true });
       return res.redirect("/");
     } else {
       res.send("Incorrect PIN");
@@ -64,4 +72,4 @@ app.post("/auth", (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log("Server running on http://localhost:3000"));
+app.listen(process.env.PORT, () => console.log(`Server running on http://localhost:${process.env.PORT}`))

@@ -25,8 +25,8 @@ async function updateDisplay() {
             </div>
             <div style="font-size: clamp(1.25rem, 1.04rem + 0.8vw, 2rem); font-weight: 600;  color: ${statusColor};flex-grow: 1;">${statusText}</div>
             <div style="background-color: #0D5E61;border-radius: .3vw;padding: .7vw;text-align: left;flex-grow: 1;">
-                <div style="font-size: clamp(0.875rem, 0.805rem + 0.2667vw, 1.125rem);margin-bottom: .2vw;">${data.entryType}</div>
-                <div style="font-size: clamp(1.125rem, 1.02rem + 0.4vw, 1.5rem);font-weight: 600;">Employee</div>
+                <div style="font-size: clamp(0.875rem, 0.805rem + 0.2667vw, 1.125rem);margin-bottom: .2vw;">Entry Type</div>
+                <div style="font-size: clamp(1.125rem, 1.02rem + 0.4vw, 1.5rem);font-weight: 600;">${data.entryType}</div>
             </div>
             <div style="display: flex;gap: .8vw;margin: .8vw 0;flex-grow: 1;">
                 <div style="background-color: #0D5E61;border-radius: .3vw;padding: .7vw;text-align: left;flex-grow: 1;">
